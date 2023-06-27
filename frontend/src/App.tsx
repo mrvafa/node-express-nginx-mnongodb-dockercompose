@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
 
+interface Message {
+  id: number;
+  text: string;
+}
+
 function App() {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState<Message[]>([]);
 
   useEffect(() => {
     fetch("/api/messages")
       .then((response) => response.text())
       .then((responseText) => JSON.parse(responseText))
-      .then((data) => setMessages(data))
+      .then((data: Message[]) => setMessages(data))
       .catch((error) => console.error(error));
   }, []);
 

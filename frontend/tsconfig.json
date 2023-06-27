@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es5",
+    "lib": ["dom", "es2015"],
+    "jsx": "react",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "types": ["node", "react"],
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "exclude": ["node_modules", "build", "dist"],
+    "resolveExtensions": [".tsx", ".ts", ".js"]
+  }
+}
